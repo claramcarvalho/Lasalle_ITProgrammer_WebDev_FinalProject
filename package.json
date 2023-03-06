@@ -1,0 +1,12 @@
+{
+  "name": "final-project",
+  "version": "0.0.0",
+  "description": "FinalProject",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
