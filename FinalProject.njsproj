@@ -31,8 +31,21 @@
     <Content Include="app.js" />
     <Content Include="package.json" />
     <Content Include="public\brand\logo.png" />
+    <Content Include="public\brand\logo_no_back.png" />
+    <Content Include="public\brand\menu_no_back.png" />
+    <Content Include="public\brand\menu_white.jpg" />
     <Content Include="public\brand\no_back.png" />
     <Content Include="public\brand\white_back.png" />
+    <Content Include="public\images\andraz-lazic-iy_MT2ifklc-unsplash.jpg" />
+    <Content Include="public\images\derek-duran-Jz4QMhLvGgw-unsplash.jpg" />
+    <Content Include="public\images\dustan-woodhouse-jnsFZJrhuMM-unsplash.jpg" />
+    <Content Include="public\images\header.jpg" />
+    <Content Include="public\images\ikhsan-baihaqi-pbc2wXbQYpI-unsplash.jpg" />
+    <Content Include="public\images\mae-mu-H5Hj8QV2Tx4-unsplash.jpg" />
+    <Content Include="public\images\mahmoud-fawzy-FBezBX26dyY-unsplash.jpg" />
+    <Content Include="public\images\marine-dumay-kXOPcslsae8-unsplash.jpg" />
+    <Content Include="public\images\vinicius-benedit--1GEAA8q3wk-unsplash.jpg" />
+    <Content Include="public\images\yoav-aziz-TqtY4_sQGVE-unsplash.jpg" />
     <Content Include="public\index.css">
       <SubType>Code</SubType>
     </Content>
@@ -45,6 +58,7 @@
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="public\brand\" />
+    <Folder Include="public\images\" />
     <Folder Include="public\index\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
