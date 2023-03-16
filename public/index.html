@@ -3,55 +3,303 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Gyosa</title>
+    <title>Gyoza</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@1,600&f[]=outfit@1,600&f[]=bespoke-slab@400&f[]=poppins@600&f[]=spline-sans@400&f[]=quicksand@600&f[]=hind@400&display=swap" rel="stylesheet">
     <link href="index.css" rel="stylesheet" />
-    <link rel="icon" href="brand/icon_no_back.png"/>
+    <link rel="icon" href="brand/icon_no_back.png" />
 </head>
 <body>
+    <!--
+        
+    To use fonts in CSS files:
+    font-family: 'Switzer', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Bespoke Slab', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Spline Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Hind', sans-serif;
+        -->
+
     <header>
-        <img src="brand/no_back.png" alt="Gyosa Logo"/>
+        <img src="brand/no_back.png" alt="Gyosa Logo" />
+        <nav>
+            <img alt="icon_menu" src="images/menu.png" />
+            <div>
+                <a href="#presentation">The Restaurant</a>
+                <a href="#menu">Menu</a>
+            </div>
+        </nav>
     </header>
     <main>
+        <section id="presentation">
+            <h2>The Gyoza Restaurant</h2>
+            <p>Gyoza is a sophisticated Japanese restaurant located in the heart of Montreal, offering a one-of-a-kind and exquisite dining experience. From the moment you step into the restaurant, you'll be transported to Japan, with our sleek and modern decor and warm and inviting atmosphere. From the presentation of the dishes to the quality of the ingredients, we payed attention to the smallest detail in every aspect of our restaurant.</p>
+            <p>We are specialized in gyoza, a delicious Japanese pan-fried dumplings, that are crispy on the outside and juicy on the inside. The menu offers a variety of flavors and fillings to choose from, including classic pork, succulent shrimp, rich and creamy cheese, and fresh and flavorful vegetables. Each gyoza is made with care and attention, and the flavors and textures are perfectly balanced, making each bite a delight for your senses.</p>
+            <p>In addition to its signature gyoza, we also offer a range of other Japanese cuisine staples, such as ramen, sushi, sashimi, tempura, and salads. All dishes are created using fresh and high-quality ingredients, and the chefs pay meticulous attention to the preparation and presentation of each dish. Whether you're in the mood for a comforting bowl of ramen or a delicate plate of sashimi, Gyoza has something to satisfy every palate.</p>
+            <p>To complement our delicious food, Gyoza also serves a wide range of beverages, including cocktails, wines, and sakes. The restaurant's knowledgeable and friendly staff are always happy to help diners choose the perfect beverage to accompany their meal, whether it's a bold and fruity cocktail or a crisp and refreshing sake.</p>
+            <p>Gyoza is the perfect venue for a romantic date night, a work lunch, or a family celebration. Our restaurant's cozy and intimate setting is perfect for a romantic evening, while its spacious and bright dining room is ideal for larger groups. The attentive and friendly service adds to the overall dining experience, making every visit to Gyoza memorable and enjoyable.</p>
+            <p>Gyoza is a must-visit destination for anyone looking for a unique and high-quality Japanese dining experience in Montreal. We offer excellence in service and that make us one of the best Japanese restaurants in the city. Whether you're a fan of gyoza or simply looking to try something new, we are here to impress.</p>
+        </section>
         <section id="menu">
-            <img src="brand/menu_no_back.png" alt="Menu Logo"/>
+            <img src="brand/menu_no_back.png" alt="Menu Logo" />
+            <div>         
+                <nav id="nav_menu">
+                    <a href="#gyoza" id="link_gyoza">Gyozas</a>
+                    <a href="#ramen" id="link_ramen">Ramens</a>
+                    <a href="#share" id="link_share">Plates to Share</a>
+                    <a href="#alcohol" id="link_alcohol">Cocktails and Alcoholic Drinks</a>
+                    <a href="#soft" id="link_soft">Soft Drinks</a>
+                </nav>
+                <div id="gyoza_menu" class="submenu">
+                    <div id="gallery_gyoza">
+                        <div id="gyoza1">
+                            <h3>Spinach and Feta</h3>
+                            <img src="images/gyoza/1.jpg" alt="gyoza" />
+                        </div>
+                        <div id="gyoza2">
+                            <h3>Chicken Mushroom</h3>
+                            <img src="images/gyoza/2.jpg" alt="gyoza" />
+                        </div>
+                        <div id="gyoza3">
+                            <h3>Kimchi Pork</h3>
+                            <img src="images/gyoza/3.jpg" alt="gyoza" />
+                        </div>
+                        <div id="gyoza4">
+                            <h3>Lobster and Scallop</h3>
+                            <img src="images/gyoza/4.jpg" alt="gyoza" />
+                        </div>
+                        <div id="gyoza5">
+                            <h3>Truffle Mushroom</h3>
+                            <img src="images/gyoza/5.jpg" alt="gyoza" />
+                        </div>
+                        <!--<img src="images/gyoza/2.jpg" alt="gyoza" id="gyoza2" />
+                        <img src="images/gyoza/3.jpg" alt="gyoza" id="gyoza3" />
+                        <img src="images/gyoza/4.jpg" alt="gyoza" id="gyoza4" />
+                        <img src="images/gyoza/5.jpg" alt="gyoza" id="gyoza5" />-->
+                    </div>
+                    <form id="form_gyoza">
+                        <fieldset>
+                            <legend>Select your flavor:</legend>
+                            <input type="radio" id="spinach" name="gyoza" value="spinach" />
+                            <label for="spinach">Spinach and Feta</label><br />
+                            <input type="radio" id="mushroom" name="gyoza" value="spinach" />
+                            <label for="spinach">Chicken Mushroom</label><br />
+                            <input type="radio" id="pork" name="gyoza" value="pork" />
+                            <label for="pork">Kimchi Pork</label><br />
+                            <input type="radio" id="lobster" name="gyoza" value="lobster" />
+                            <label for="lobster">Lobster and Scallop</label><br />
+                            <input type="radio" id="truffle" name="gyoza" value="truffle" />
+                            <label for="truffle">Truffle Mushroom</label><br />
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select your size:</legend>
+                            <label for="size"></label>
+                            <select id="size" name="size">
+                                <option value="2">2 un.</option>
+                                <option value="4">4 un.</option>
+                                <option value="8">8 un.</option>
+                            </select>
+                        </fieldset>
+                        <button type="button">Add to Cart</button>
+                    </form>
+                </div>
+                <div id="ramen_menu" class="submenu"></div>
+                <div id="share_menu" class="submenu"></div>
+                <div id="alcohol_menu" class="submenu"></div>
+                <div id="soft_menu" class="submenu"></div>
+            </div>
+        </section>
+        <!--<section id="menu">
+            <img src="brand/menu_no_back.png" alt="Menu Logo" />
             <section class="sub_menu">
                 <h2>To Eat</h2>
-                <section class="sub_sub_menu">
+                <div class="sub_sub_menu">
                     <h3>Sushi Bar</h3>
                     <div class="item">
-                        <div class="img_item">
-                            <!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
-                        </div>
-                        <h4 class="item_name">Sushi</h4>
-                        <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
-                        <p class="size">6 un.</p>
-                        <p class="price">CAD$ 20.00</p>
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
                     </div>
-                </section>
-                <section class="sub_sub_menu">
-                    <h3>Plates to Share</h3>
-                </section>
-                <section class="sub_sub_menu">
-                    <h3>For those hot days</h3>
-                </section>
-                <section class="sub_sub_menu">
-                    <h3>To fill you "Sweet Tooth"</h3>
-                </section>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                </div>
+                <div class="sub_sub_menu">
+                    <h3>Hot Plates To Share</h3>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                </div>
             </section>
             <section class="sub_menu">
                 <h2>To Drink</h2>
-                <section class="sub_sub_menu">
+                <div class="sub_sub_menu">
                     <h3>Beers</h3>
-                </section>
-                <section class="sub_sub_menu">
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                </div>
+                <div class="sub_sub_menu">
                     <h3>Cocktails</h3>
-                </section>
-                <section class="sub_sub_menu">
-                    <h3>Soft Drinks</h3>
-                </section>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                </div>
+                <div class="sub_sub_menu">
+                    <h3>Sof Drinks</h3>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                    <div class="item">
+                        <div class="item_pic"></div>
+                        <div class="item_desc"></div>
+                    </div>
+                </div>
             </section>
-        </section>
+        </section>-->
     </main>
-    <footer></footer>
+    <footer>
+        <nav>
+            <img alt="icon_menu" src="images/menu.png" />
+            <div>
+                <a>Teste</a>
+                <a>Teste</a>
+            </div>
+        </nav>
+    <!--<nav>
+        <div>
+            <a href="#products">Products</a>
+            <div>
+                <a href="#product1" class="bs"></a>
+                <a href="#product2" class="bs"></a>
+                <a href="#product3" class="bs"></a>
+                <a href="#product4" class="bs"></a>
+            </div>
+        </div>
+    </nav>-->
+    </footer>
 </body>
 </html>
+
+<!--<h2>To Eat</h2>
+    <div class="sub_sub_menu">
+        <h3>Sushi Bar</h3>
+        <div class="item">
+            <div class="img_item">-->
+<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
+<!--</div>
+    <h4 class="item_name">Sushi</h4>
+    <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
+    <p class="size">6 un.</p>
+    <p class="price">CAD$ 20.00</p>
+</div>
+<div class="item">
+    <div class="img_item">-->
+<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
+<!--</div>
+        <h4 class="item_name">Sushi</h4>
+        <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
+        <p class="size">6 un.</p>
+        <p class="price">CAD$ 20.00</p>
+    </div>
+</div>
+<div class="sub_sub_menu">
+    <h3>Plates to Share</h3>
+    <div class="item">
+        <div class="img_item">-->
+<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
+<!--</div>
+    <h4 class="item_name">Sushi</h4>
+    <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
+    <p class="size">6 un.</p>
+    <p class="price">CAD$ 20.00</p>
+</div>
+<div class="item">
+    <div class="img_item">-->
+<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
+<!--</div>
+        <h4 class="item_name">Sushi</h4>
+        <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
+        <p class="size">6 un.</p>
+        <p class="price">CAD$ 20.00</p>
+    </div>
+</div>
+<section class="sub_sub_menu">
+    <h3>For those hot days</h3>
+</section>
+<section class="sub_sub_menu">
+    <h3>To fill you "Sweet Tooth"</h3>
+</section>-->

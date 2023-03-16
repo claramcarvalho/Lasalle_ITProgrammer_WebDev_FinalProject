@@ -1,75 +1,428 @@
 body {
     background-color:black;
     margin:0;
+    display:grid;
+    grid-template-rows: 600px auto 50px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
 }
 
-/*header*/
+section {
+    margin: 0px 40px 40px 40px;
+    padding-top:30px;
+    box-sizing: content-box;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 50px;
+    font-weight:500;
+}
+
+p {
+    font-family: 'Switzer', sans-serif;
+    font-size:20px;
+    font-weight:200;
+}
+
+/*
+    -------------------------------
+    grid: nivek 1: header
+    -------------------------------
+
+*/
 header {
+    grid-area: header;
     background-image: url('images/header.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 6fr 1fr .5fr;
+    grid-template-rows: 40px 6fr 1fr .5fr;
     grid-template-areas:
+        "nav nav nav"
         ". . ."
         ". logo ."
         ". . .";
 }
 
-header img {
-    width: 70%;
-    height:auto;
-    margin:10px auto;
-    grid-area:logo;
+header > nav {
+    position: relative;
+/*    width: 100vw;
+*/    height:50px;
+    font-family: 'Outfit', sans-serif;
+    background-color: #ffffff96;
 }
+
+header > nav > img {
+    width: 30px;
+    padding: 10px;
+    margin:0px;
+}
+
+header > nav > div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    display: flex;
+}
+
+header > nav > div > a {
+    display: none;
+    padding: 0px 15px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+header > nav:hover > div a {
+display: block;
+}
+
+header > nav > a:hover {
+background-color: #ffffffc2;
+}
+
+header > img {
+    max-width: 70%;
+    height: auto;
+    margin: 10px auto;
+    grid-area: logo;
+/*    position:absolute;
+*/}
+
+
+
+
+/*
+    ---------------------------------
+    grid: nivel 1: main
+    ---------------------------------
+*/
+main{
+    grid-area:main;
+    padding:20px;
+    display: grid;
+    font-family:'Century Gothic', sans-serif;
+}
+
+section h2 {
+    margin: 5px auto;
+    text-align: center;
+}
+
+#presentation {
+    border-bottom: dotted 10px #ef826e;
+}
+
+#presentation p{
+    text-indent:50px;
+    text-align:justify;
+}
+
+#menu {
+    border: solid .5vw #518269;
+    border-radius: 30px;
+    position: relative;
+    display:grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-rows: auto auto 30px;
+    grid-template-areas:
+        ". menu ."
+        ". items ."
+        ". . .";
+}
+
+#menu > img {
+    grid-area:menu;
+    width: 20%;
+/*    transition:all 2s ease;
+*/}
+
+/*#menu > img:hover {
+    transform:scale(2);
+}*/
+
+/*
+    ------------------
+    items in menu grid
+    ------------------
+*/
+#menu > div {
+    grid-area: items;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        "nav"
+        "gyozas"
+        "ramens"
+        "to_share"
+        "alcohol"
+        "soft";
+}
+
+/*
+    --------------
+    nav links grid
+    --------------
+*/
+
+#nav_menu{
+    grid-area:nav;
+    padding-top:15px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "gyoza ramen share alcohol soft";
+}
+
+#nav_menu a{
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    color:black;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    font-size:110%;
+    height:35px;
+}
+
+/* temporary height while there are no items */
+.submenu{
+    height:700px;
+}
+
+/* putting items in grid and applying color */
+
+/* gyoza menu */
+#gyoza_menu {
+    grid-area: gyozas;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 300px 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    grid-template-areas:
+        "gallery gallery gallery gallery gallery"
+        ". . form . .";
+    padding: 15px 40px;
+}
+#link_gyoza {
+    grid-area:gyoza;
+    background-color: #ffffff;
+}
+
+#gallery_gyoza{
+    grid-area:gallery;
+    align-content:center;
+    justify-self:stretch;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    align-items:center;
+    gap: 20px;
+    overflow-x:scroll;
+    position:relative;
+}
+
+    #gallery_gyoza div {
+        position: relative;
+        transition: all 0.5s ease;
+        opacity: 0.5;
+    }
+
+#gallery_gyoza img{
+    width:300px;
+    height:250px;
+    object-fit:cover;
+    object-position:bottom;
+/*    transition: all 2s ease;
+*/}
+
+#gallery_gyoza div:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+#gallery_gyoza h3 {
+    position: absolute;
+    max-width: 100%;
+    text-align: center;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    color: black;
+    background-color: #ffffffc4;
+    border-radius:20px;
+}
+
+#form_gyoza{
+    grid-area:form;
+}
+
+#ramen_menu {
+    grid-area: ramens;
+    background-color: #ef826e;
+}
+#link_ramen {
+    grid-area: ramen;
+    background-color: #ef826e;
+}
+#share_menu {
+    grid-area: to_share;
+    background-color: #b8826c;
+}
+#link_share {
+    grid-area: share;
+    background-color: #b8826c;
+}
+#alcohol_menu {
+    grid-area: alcohol;
+    background-color: #88826b;
+}
+#link_alcohol {
+    grid-area: alcohol;
+    background-color: #88826b;
+}
+#soft_menu {
+    grid-area: soft;
+    background-color: #518269;
+}
+#link_soft {
+    grid-area: soft;
+    background-color: #518269;
+}
+
+/*
+    -------------------
+    forms
+    ------------------
+*/
+
+form {
+    color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*
+    -------------------------------
+    grid: nivel 1: footer
+    -------------------------------
+*/
+footer{
+    grid-area:footer;
+}
+
+/*
+    --------------
+    Responsiviness
+    --------------
+*/
+@media screen and (max-height:600px) {
+    body {
+        grid-template-rows: 300px auto 50px;
+    }
+
+    header {
+        grid-template-rows: 30px 6fr 1fr .5fr;
+    }
+
+        header img {
+            width: 40%;
+            height: auto;
+        }
+}
+
 
 /*sections*/
 section {
     color:white;
 }
 
-#menu {
-    margin: 50px;
-    border: solid 1.1vw #518269;
-    border-radius: 30px;
-    position:relative;
-    padding:4vw 4vw 4vw 4vw;
-}
 
-#menu>img {
-    position:absolute;
-    top:-15px;
-    left:30px;
-    width:30%;
-}
 
-.sub_menu {
-    border-radius: 20px;
-    border: solid 3px #ef826e;
-    background-color: #ef826e;
+/*.sub_menu {
+    border-radius: 20px;*/
+/*    border: solid 3px #ef826e;*/
+    /*background-color: #ef826e;
     margin-top: 50px;
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    margin-bottom: 0;
+    padding:10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#menu h2 {
-    margin-bottom: 10px;
-    color: #ef826e;
-    position: absolute;
-    top: -65px;
+.sub_menu>h2 {
+    margin:0;
+    color:blue;*/
+   /* color: #ef826e;*/
+    /*position: absolute;
+    bottom:100%;
     font-size: calc(12px + 2vw);
 }
 
-/*items*/
+.sub_sub_menu {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    width:90%;
+    margin-bottom:25px;
+}
+.sub_sub_menu>h3{
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+}*/
 
-.item {
-    height: 200px;
-    width: 400px;
-    min-width:80%;
+/*
+    items
+*/
+
+/*div.item{
+    min-width:200px;
+    max-width:300px;
+    min-height:100px;
+    background-color:black;
+    border-radius:10px;
+    flex-grow:1;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:10px;
+}
+
+div.item_pic{
+    flex-grow:1;
+    min-width:100px;
+    background-color:forestgreen;
+}
+
+div.item_desc{
+    flex-grow:1;
+    min-width:150px;
+    background-color:darkblue;
+}*/
+
+
+
+/*items
+
+div.item {
+    min-width:40%;
+    width: 30px;
+    margin: 0 auto;
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
     grid-template-columns: 4fr 2fr 4fr;
@@ -77,37 +430,93 @@ section {
         "pic name name"
         "pic desc desc"
         "pic un price";
-    background-color:black;
-    border-radius:5px;
+    background-color: black;
+    border-radius: 9px;
+    gap: 10px;
+    padding-right: 10px;
 }
 
     .item .img_item {
         grid-area: pic;
-        height: 80%;
-        width: 80%;
+        width: 100%;
+        height: 100%;
         margin: auto auto;
         background-image: url("images/andraz-lazic-iy_MT2ifklc-unsplash.jpg");
-        background-size:cover;
-        background-position:center;
+        background-size: cover;
+        background-position: center;
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
     }
 .item .item_name{
     grid-area:name;
-    font-size: max(2em,5px);
+    font-size: max(1.5em,5px);
     margin:0 auto;
 }
-.item .desc {
-    grid-area: desc;
-    font-size:50%;
-}
+    .item .desc {
+        grid-area: desc;
+        font-size: max(1em,5px);
+    }
 .item .size {
     grid-area: un;
-    margin:0;
+    margin:0 auto;
 }
 .item .price {
     grid-area: price;
-    margin:0;
+    margin:0 auto;
 }
 
-.img_item img {
+/*.img_item img {
     height:100%;
 }
+
+*/
+
+/*
+    FOOTER
+*/
+
+footer{
+    background-color:white;
+}
+
+footer>nav{
+    position:relative;
+}
+
+footer>nav>img{
+    width:30px;
+    padding:10px;
+}
+
+footer>nav>div{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:50px;
+    display:flex;
+}
+
+footer>nav>div>a{
+    display:none;
+    padding: 0px 15px;
+}
+
+footer>nav>img:hover>div{
+    display:block;
+}
+
+footer> nav:hover > div a {
+    display: block;
+}
+
+
+
+/*-----------------*/
+/*nav > div > div > a {
+    display: none;
+    text-align: left;
+}
+
+nav > div:hover > div a {
+    display: block;
+}*/

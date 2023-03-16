@@ -44,6 +44,7 @@
     <Content Include="public\images\mae-mu-H5Hj8QV2Tx4-unsplash.jpg" />
     <Content Include="public\images\mahmoud-fawzy-FBezBX26dyY-unsplash.jpg" />
     <Content Include="public\images\marine-dumay-kXOPcslsae8-unsplash.jpg" />
+    <Content Include="public\images\menu.png" />
     <Content Include="public\images\vinicius-benedit--1GEAA8q3wk-unsplash.jpg" />
     <Content Include="public\images\yoav-aziz-TqtY4_sQGVE-unsplash.jpg" />
     <Content Include="public\index.css">
