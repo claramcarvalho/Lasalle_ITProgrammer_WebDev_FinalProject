@@ -10,7 +10,7 @@
 </head>
 <body>
     <!--
-        
+
     To use fonts in CSS files:
     font-family: 'Switzer', sans-serif;
     font-family: 'Outfit', sans-serif;
@@ -20,36 +20,40 @@
     font-family: 'Quicksand', sans-serif;
     font-family: 'Hind', sans-serif;
         -->
-
+    <nav id="menu_nav">
+        <img alt="icon_menu" src="images/menu.png" />
+        <div>
+            <a href="#presentation">The Restaurant</a>
+            <a href="#menu">Menu</a>
+        </div>
+    </nav>
+    <nav id="cart">
+        <img alt="cart" src="images/cart.png" />
+    </nav>
     <header>
         <img src="brand/no_back.png" alt="Gyosa Logo" />
-        <nav>
-            <img alt="icon_menu" src="images/menu.png" />
-            <div>
-                <a href="#presentation">The Restaurant</a>
-                <a href="#menu">Menu</a>
-            </div>
-        </nav>
     </header>
     <main>
         <section id="presentation">
             <h2>The Gyoza Restaurant</h2>
+            <img src="images/resto/rest1.jpg" alt="Deco"/> 
             <p>Gyoza is a sophisticated Japanese restaurant located in the heart of Montreal, offering a one-of-a-kind and exquisite dining experience. From the moment you step into the restaurant, you'll be transported to Japan, with our sleek and modern decor and warm and inviting atmosphere. From the presentation of the dishes to the quality of the ingredients, we payed attention to the smallest detail in every aspect of our restaurant.</p>
             <p>We are specialized in gyoza, a delicious Japanese pan-fried dumplings, that are crispy on the outside and juicy on the inside. The menu offers a variety of flavors and fillings to choose from, including classic pork, succulent shrimp, rich and creamy cheese, and fresh and flavorful vegetables. Each gyoza is made with care and attention, and the flavors and textures are perfectly balanced, making each bite a delight for your senses.</p>
             <p>In addition to its signature gyoza, we also offer a range of other Japanese cuisine staples, such as ramen, sushi, sashimi, tempura, and salads. All dishes are created using fresh and high-quality ingredients, and the chefs pay meticulous attention to the preparation and presentation of each dish. Whether you're in the mood for a comforting bowl of ramen or a delicate plate of sashimi, Gyoza has something to satisfy every palate.</p>
+            <img src="images/resto/rest3.jpg" alt="Preparation"/>
             <p>To complement our delicious food, Gyoza also serves a wide range of beverages, including cocktails, wines, and sakes. The restaurant's knowledgeable and friendly staff are always happy to help diners choose the perfect beverage to accompany their meal, whether it's a bold and fruity cocktail or a crisp and refreshing sake.</p>
             <p>Gyoza is the perfect venue for a romantic date night, a work lunch, or a family celebration. Our restaurant's cozy and intimate setting is perfect for a romantic evening, while its spacious and bright dining room is ideal for larger groups. The attentive and friendly service adds to the overall dining experience, making every visit to Gyoza memorable and enjoyable.</p>
             <p>Gyoza is a must-visit destination for anyone looking for a unique and high-quality Japanese dining experience in Montreal. We offer excellence in service and that make us one of the best Japanese restaurants in the city. Whether you're a fan of gyoza or simply looking to try something new, we are here to impress.</p>
         </section>
         <section id="menu">
             <img src="brand/menu_no_back.png" alt="Menu Logo" />
-            <div>         
+            <div>
                 <nav id="nav_menu">
-                    <a href="#gyoza" id="link_gyoza">Gyozas</a>
-                    <a href="#ramen" id="link_ramen">Ramens</a>
-                    <a href="#share" id="link_share">Plates to Share</a>
-                    <a href="#alcohol" id="link_alcohol">Cocktails and Alcoholic Drinks</a>
-                    <a href="#soft" id="link_soft">Soft Drinks</a>
+                    <a href="#gyoza_menu" id="link_gyoza">Gyozas</a>
+                    <a href="#ramen_menu" id="link_ramen">Ramens</a>
+                    <a href="#share_menu" id="link_share">Plates to Share</a>
+                    <a href="#alcohol_menu" id="link_alcohol">Cocktails and Alcoholic Drinks</a>
+                    <a href="#soft_menu" id="link_soft">Soft Drinks</a>
                 </nav>
                 <div id="gyoza_menu" class="submenu">
                     <div id="gallery_gyoza">
@@ -73,10 +77,6 @@
                             <h3>Truffle Mushroom</h3>
                             <img src="images/gyoza/5.jpg" alt="gyoza" />
                         </div>
-                        <!--<img src="images/gyoza/2.jpg" alt="gyoza" id="gyoza2" />
-                        <img src="images/gyoza/3.jpg" alt="gyoza" id="gyoza3" />
-                        <img src="images/gyoza/4.jpg" alt="gyoza" id="gyoza4" />
-                        <img src="images/gyoza/5.jpg" alt="gyoza" id="gyoza5" />-->
                     </div>
                     <form id="form_gyoza">
                         <fieldset>
@@ -94,142 +94,272 @@
                         </fieldset>
                         <fieldset>
                             <legend>Select your size:</legend>
-                            <label for="size"></label>
-                            <select id="size" name="size">
-                                <option value="2">2 un.</option>
-                                <option value="4">4 un.</option>
-                                <option value="8">8 un.</option>
-                            </select>
+                            <input type="radio" id="2un" name="quant" value="2un" />
+                            <label for="2un">2 un: CAD$ 7.00</label><br />
+                            <input type="radio" id="4un" name="quant" value="4un" />
+                            <label for="4un">4 un: CAD$ 10.00</label><br />
+                            <input type="radio" id="8un" name="quant" value="8un" />
+                            <label for="8un">8 un: CAD$ 15.00</label>
                         </fieldset>
                         <button type="button">Add to Cart</button>
                     </form>
                 </div>
-                <div id="ramen_menu" class="submenu"></div>
-                <div id="share_menu" class="submenu"></div>
-                <div id="alcohol_menu" class="submenu"></div>
-                <div id="soft_menu" class="submenu"></div>
+                <div id="ramen_menu" class="submenu">
+                    <div id="gallery_ramen">
+                        <div id="ramen1">
+                            <h3>Tonkotsu Ramen</h3>
+                            <img src="images/ramen/ram1.jpg" alt="ramen" />
+                        </div>
+                        <div id="ramen2">
+                            <h3>Shoyu Ramen</h3>
+                            <img src="images/ramen/ram2.jpg" alt="ramen" />
+                        </div>
+                        <div id="ramen3">
+                            <h3>Miso Ramen</h3>
+                            <img src="images/ramen/ram3.jpg" alt="ramen" />
+                        </div>
+                        <div id="ramen4">
+                            <h3>Tantanmen Ramen</h3>
+                            <img src="images/ramen/ram4.jpg" alt="ramen" />
+                        </div>
+                        <div id="ramen5">
+                            <h3>Vegetarian Ramen</h3>
+                            <img src="images/ramen/ram5.jpg" alt="ramen" />
+                        </div>
+                        <div id="ramen6">
+                            <h3>Duck Ramen</h3>
+                            <img src="images/ramen/ram6.jpg" alt="ramen" />
+                        </div>
+                    </div>
+                    <form id="form_ramen">
+                        <fieldset>
+                            <legend>Select your flavor (CAD$ 18.99):</legend>
+                            <p>Serves 1 person</p>
+                            <input type="radio" id="tonkotsu" name="ramen" value="tonkotsu" />
+                            <label for="tonkotsu">
+                                Tonkotsu Ramen
+                                <span>A rich and creamy pork bone broth with tender chashu pork, boiled egg, bamboo shoots, and green onions.</span>
+                            </label><br />
+                            <input type="radio" id="shoyu" name="ramen" value="shoyu" />
+                            <label for="shoyu">
+                                Shoyu Ramen
+                                <span>A soy sauce-based broth with chashu pork, menma (fermented bamboo shoots), green onions, and nori seaweed.</span>
+                            </label><br />
+                            <input type="radio" id="miso" name="ramen" value="miso" />
+                            <label for="miso">
+                                Miso Ramen
+                                <span>A miso-based broth with chashu pork, corn, bean sprouts, and green onions.</span>
+                            </label><br />
+                            <input type="radio" id="tantan" name="ramen" value="tantan" />
+                            <label for="tantan">
+                                Tantanmen Ramen
+                                <span>A spicy broth made with sesame paste, chili oil, and ground pork, topped with bok choy, spinach, and scallions.</span>
+                            </label><br />
+                            <input type="radio" id="veg" name="ramen" value="veg" />
+                            <label for="veg">
+                                Vegetarian Ramen
+                                <span>A hearty vegetable broth with tofu, mushrooms, corn, and a variety of other vegetables, topped with nori seaweed and green onions.</span>
+                            </label><br />
+                            <input type="radio" id="duck" name="ramen" value="duck" />
+                            <label for="duck">
+                                Duck Ramen
+                                <span>A rich and flavorful broth made with duck bones, with tender slices of duck breast, bok choy, and green onions.</span>
+                                </label><br />
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select quantity:</legend>
+                            <label for="quantity">How many?</label>
+                            <input id="quantity" name="quantity" type="number" min="1"/>
+                        </fieldset>
+                        <button type="button">Add to Cart</button>
+                    </form>
+                </div>
+                <div id="share_menu" class="submenu">
+                    <div id="gallery_share">
+                        <div id="share1">
+                            <h3>Okonomiyaki</h3>
+                            <img src="images/share/share1.jpg" alt="plate" />
+                        </div>
+                        <div id="share2">
+                            <h3>Karaage</h3>
+                            <img src="images/share/share2.jpg" alt="plate" />
+                        </div>
+                        <div id="share3">
+                            <h3>Takoyaki</h3>
+                            <img src="images/share/share3.jpg" alt="plate" />
+                        </div>
+                        <div id="share4">
+                            <h3>Nasu Dengaku</h3>
+                            <img src="images/share/share4.webp" alt="plate" />
+                        </div>
+                        <div id="share5">
+                            <h3>Tuna Tataki</h3>
+                            <img src="images/share/share5.webp" alt="plate" />
+                        </div>
+                    </div>
+                    <form id="form_share">
+                        <fieldset>
+                            <legend>Select your plate (CAD$ 23.99):</legend>
+                            <p>All plates serve 2 people</p>
+                            <input type="radio" id="oko" name="share" value="okonomi" />
+                            <label for="oko">
+                                Okonomiyaki
+                                <span>A savory pancake made with a batter of flour, egg, and shredded cabbage, topped with sliced pork belly, bonito flakes, and drizzled with okonomiyaki sauce and mayonnaise.</span>
+                            </label><br />
+                            <input type="radio" id="kara" name="share" value="karaage" />
+                            <label for="kara">
+                                Karaage
+                                <span>Japanese fried chicken marinated in soy sauce, garlic, and ginger, served with a side of Japanese mayo and a wedge of lemon.</span>
+                            </label><br />
+                            <input type="radio" id="tako" name="share" value="takoyaki" />
+                            <label for="tako">
+                                Takoyaki
+                                <span>Octopus balls made with a batter of flour and dashi, filled with diced octopus, pickled ginger, and green onion, topped with takoyaki sauce, mayo, and bonito flakes.</span>
+                            </label><br />
+                            <input type="radio" id="nasu" name="share" value="nasudengaku" />
+                            <label for="nasu">
+                                Nasu Dengaku
+                                <span>Grilled eggplant topped with a miso glaze, garnished with sesame seeds and scallions.</span>
+                            </label><br />
+                            <input type="radio" id="tuna" name="share" value="tunatataki" />
+                            <label for="tuna">
+                                Tuna Tataki
+                                <span>Thinly sliced seared tuna served with ponzu sauce, grated daikon, and scallions.</span>
+                            </label><br />
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select quantity:</legend>
+                            <label for="quantity">How many?</label>
+                            <input id="quantity" name="quantity" type="number" min="1" />
+                        </fieldset>
+                        <button type="button">Add to Cart</button>
+                    </form>
+                </div>
+                <div id="alcohol_menu" class="submenu">
+                    <div id="gallery_alcohol">
+                        <div id="alcohol1">
+                            <h3>Japanese Highball</h3>
+                            <img src="images/alcohol/alc1.jpg" alt="alcohol" />
+                        </div>
+                        <div id="alcohol2">
+                            <h3>Chu-Hai</h3>
+                            <img src="images/alcohol/alc2.jpg" alt="alcohol" />
+                        </div>
+                        <div id="alcohol3">
+                            <h3>Umeshu</h3>
+                            <img src="images/alcohol/alc3.webp" alt="alcohol" />
+                        </div>
+                        <div id="alcohol4">
+                            <h3>Sake Martini</h3>
+                            <img src="images/alcohol/alc4.jpg" alt="alcohol" />
+                        </div>
+                        <div id="alcohol5">
+                            <h3>Yuzu Sour</h3>
+                            <img src="images/alcohol/alc5.jpg" alt="alcohol" />
+                        </div>
+                    </div>
+                    <form id="form_alcohol">
+                        <fieldset>
+                            <legend>Select your drink (CAD$ 12,50):</legend>
+                            <p>Each drink is around 5oz (250ml)</p>
+                            <input type="radio" id="highball" name="drink" value="JapHighball" />
+                            <label for="highball">
+                                Japanese Highball
+                                <span>A simple yet refreshing cocktail made with Japanese whisky and sparkling water, served over ice.</span>
+                            </label><br />
+                            <input type="radio" id="chuhai" name="drink" value="chuhai" />
+                            <label for="chuhai">
+                                Chu Hai
+                                <span>A popular Japanese cocktail made with shochu and flavored with lemon, grapefruit, or other fruits, mixed with soda water and served over ice.</span>
+                            </label><br />
+                            <input type="radio" id="umeshu" name="drink" value="umeshu" />
+                            <label for="umeshu">
+                                Umeshu
+                                <span>A sweet and sour plum liqueur that can be served on the rocks or mixed with soda water for a refreshing cocktail.</span>
+                            </label><br />
+                            <input type="radio" id="sakemart" name="drink" value="sakemartini" />
+                            <label for="sakemart">
+                                Sake Martini
+                                <span>A classic martini made with sake instead of gin or vodka, and often flavored with a hint of citrus or ginger.</span>
+                            </label><br />
+                            <input type="radio" id="yuzu" name="drink" value="yuzusour" />
+                            <label for="yuzu">
+                                Yuzu Sour
+                                <span>A cocktail made with yuzu juice, a Japanese citrus fruit with a tangy and slightly sweet flavor, mixed with shochu, soda water, and a touch of simple syrup.</span>
+                            </label><br />
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select quantity:</legend>
+                            <label for="quantity">How many?</label>
+                            <input id="quantity" name="quantity" type="number" min="1" />
+                        </fieldset>
+                        <button type="button">Add to Cart</button>
+                    </form>
+                </div>
+                <div id="soft_menu" class="submenu">
+                    <div id="gallery_soft">
+                        <div id="soft1">
+                            <h3>Ramune</h3>
+                            <img src="images/soft/soft1.jpg" alt="soft" />
+                        </div>
+                        <div id="soft2">
+                            <h3>Calpico</h3>
+                            <img src="images/soft/soft2.jpg" alt="soft" />
+                        </div>
+                        <div id="soft3">
+                            <h3>Matcha Latte</h3>
+                            <img src="images/soft/soft3.jpg" alt="soft" />
+                        </div>
+                        <div id="soft4">
+                            <h3>Iced Coffee</h3>
+                            <img src="images/soft/soft4.jpg" alt="soft" />
+                        </div>
+                        <div id="soft5">
+                            <h3>Green Tea Latte</h3>
+                            <img src="images/soft/soft5.jpg" alt="soft" />
+                        </div>
+                    </div>
+                    <form id="form_soft">
+                        <fieldset>
+                            <legend>Select your drink (CAD$ 9,50):</legend>
+                            <p>Each drink is around 5oz (250ml)</p>
+                            <p>We have also regular western soft drinks. Please ask the waiter for the available options.</p>
+                            <input type="radio" id="ramune" name="soft" value="ramune" />
+                            <label for="ramune">
+                                Ramune
+                                <span>A Japanese soda with a unique bottle design and marble stopper. The soda comes in a variety of flavors, including classic lemon-lime, strawberry, and grape.</span>
+                            </label><br />
+                            <input type="radio" id="calpico" name="soft" value="calpico" />
+                            <label for="calpico">
+                                Calpico
+                                <span>A Japanese non-carbonated soft drink with a milky and slightly tangy flavor, available in various fruit flavors like peach and lychee.</span>
+                            </label><br />
+                            <input type="radio" id="matcha" name="soft" value="matcha" />
+                            <label for="matcha">
+                                Matcha Latte
+                                <span>A traditional Japanese beverage made with finely ground green tea powder, steamed milk, and a touch of sweetener, with a creamy and slightly sweet taste.</span>
+                            </label><br />
+                            <input type="radio" id="green_latte" name="soft" value="green_latte" />
+                            <label for="green_latte">
+                                Green Tea Latte
+                                <span>A creamy and slightly sweet beverage made with matcha green tea powder, steamed milk, and a touch of sweetener, popular in both Japan and the west.</span>
+                            </label><br />
+                            <input type="radio" id="iced" name="soft" value="iced" />
+                            <label for="iced">
+                                Iced Coffee
+                                <span>A popular western beverage, often served in Japanese cafes, made with ice, freshly brewed coffee, and a touch of sweetener or cream.</span>
+                            </label><br />
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select quantity:</legend>
+                            <label for="quantity">How many?</label>
+                            <input id="quantity" name="quantity" type="number" min="1" />
+                        </fieldset>
+                        <button type="button">Add to Cart</button>
+                    </form>
+                </div>
             </div>
         </section>
-        <!--<section id="menu">
-            <img src="brand/menu_no_back.png" alt="Menu Logo" />
-            <section class="sub_menu">
-                <h2>To Eat</h2>
-                <div class="sub_sub_menu">
-                    <h3>Sushi Bar</h3>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                </div>
-                <div class="sub_sub_menu">
-                    <h3>Hot Plates To Share</h3>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="sub_menu">
-                <h2>To Drink</h2>
-                <div class="sub_sub_menu">
-                    <h3>Beers</h3>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                </div>
-                <div class="sub_sub_menu">
-                    <h3>Cocktails</h3>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                </div>
-                <div class="sub_sub_menu">
-                    <h3>Sof Drinks</h3>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                    <div class="item">
-                        <div class="item_pic"></div>
-                        <div class="item_desc"></div>
-                    </div>
-                </div>
-            </section>
-        </section>-->
     </main>
     <footer>
         <nav>
@@ -239,18 +369,19 @@
                 <a>Teste</a>
             </div>
         </nav>
-    <!--<nav>
-        <div>
-            <a href="#products">Products</a>
+        <!--<nav>
             <div>
-                <a href="#product1" class="bs"></a>
-                <a href="#product2" class="bs"></a>
-                <a href="#product3" class="bs"></a>
-                <a href="#product4" class="bs"></a>
+                <a href="#products">Products</a>
+                <div>
+                    <a href="#product1" class="bs"></a>
+                    <a href="#product2" class="bs"></a>
+                    <a href="#product3" class="bs"></a>
+                    <a href="#product4" class="bs"></a>
+                </div>
             </div>
-        </div>
-    </nav>-->
+        </nav>-->
     </footer>
+
 </body>
 </html>
 
