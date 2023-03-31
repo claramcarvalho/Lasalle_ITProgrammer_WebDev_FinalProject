@@ -6,9 +6,11 @@
     <title>Gyoza</title>
     <link href="https://api.fontshare.com/v2/css?f[]=switzer@1,600&f[]=outfit@1,600&f[]=bespoke-slab@400&f[]=poppins@600&f[]=spline-sans@400&f[]=quicksand@600&f[]=hind@400&display=swap" rel="stylesheet">
     <link href="index.css" rel="stylesheet" />
+    <link href="media_query.css" rel="stylesheet" />
     <link rel="icon" href="brand/icon_no_back.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body id="top">
     <!--
 
     To use fonts in CSS files:
@@ -21,14 +23,22 @@
     font-family: 'Hind', sans-serif;
         -->
     <nav id="menu_nav">
-        <img alt="icon_menu" src="images/menu.png" />
+        <img id="menu_button" alt="icon_menu" src="images/menu.png" />
         <div>
+            <a href="#top">Home</a>
             <a href="#presentation">The Restaurant</a>
             <a href="#menu">Menu</a>
+            <img id="close_menu_button" alt="close" src="images/cancel.png" />
         </div>
     </nav>
     <nav id="cart">
-        <img alt="cart" src="images/cart.png" />
+        <img id="cart_button" alt="cart" src="images/cart.png" />
+        <div id="cart_itself">
+            <img id="close_cart_button" alt="close" src="images/cancel.png" />
+            <h3>Your selection</h3>
+            <table>
+            </table>
+        </div>
     </nav>
     <header>
         <img src="brand/no_back.png" alt="Gyosa Logo" />
@@ -49,56 +59,66 @@
             <img src="brand/menu_no_back.png" alt="Menu Logo" />
             <div>
                 <nav id="nav_menu">
-                    <a href="#gyoza_menu" id="link_gyoza">Gyozas</a>
-                    <a href="#ramen_menu" id="link_ramen">Ramens</a>
-                    <a href="#share_menu" id="link_share">Plates to Share</a>
-                    <a href="#alcohol_menu" id="link_alcohol">Cocktails and Alcoholic Drinks</a>
-                    <a href="#soft_menu" id="link_soft">Soft Drinks</a>
+                    <a href="#menu" id="link_gyoza">Gyozas</a>
+                    <a href="#menu" id="link_ramen">Ramens</a>
+                    <a href="#menu" id="link_share">Plates to Share</a>
+                    <a href="#menu" id="link_alcohol">Cocktails and Alcoholic Drinks</a>
+                    <a href="#menu" id="link_soft">Soft Drinks</a>
                 </nav>
                 <div id="gyoza_menu" class="submenu">
                     <div id="gallery_gyoza">
                         <div id="gyoza1">
-                            <h3>Spinach and Feta</h3>
-                            <img src="images/gyoza/1.jpg" alt="gyoza" />
+                            <div>
+                                <img src="images/gyoza/1.jpg" alt="gyoza" />
+                                <h3>Spinach and Feta</h3>
+                            </div>
                         </div>
                         <div id="gyoza2">
-                            <h3>Chicken Mushroom</h3>
-                            <img src="images/gyoza/2.jpg" alt="gyoza" />
+                            <div>
+                                <img src="images/gyoza/2.jpg" alt="gyoza" />
+                                <h3>Chicken Mushroom</h3>
+                            </div>
                         </div>
                         <div id="gyoza3">
-                            <h3>Kimchi Pork</h3>
-                            <img src="images/gyoza/3.jpg" alt="gyoza" />
+                            <div>
+                                <img src="images/gyoza/3.jpg" alt="gyoza" />
+                                <h3>Kimchi Pork</h3>
+                            </div>
                         </div>
                         <div id="gyoza4">
-                            <h3>Lobster and Scallop</h3>
-                            <img src="images/gyoza/4.jpg" alt="gyoza" />
+                            <div>
+                                <img src="images/gyoza/4.jpg" alt="gyoza" />
+                                <h3>Lobster and Scallop</h3>
+                            </div>
                         </div>
                         <div id="gyoza5">
-                            <h3>Truffle Mushroom</h3>
-                            <img src="images/gyoza/5.jpg" alt="gyoza" />
+                            <div>
+                                <img src="images/gyoza/5.jpg" alt="gyoza" />
+                                <h3>Truffle Mushroom</h3>
+                            </div>
                         </div>
                     </div>
                     <form id="form_gyoza">
                         <fieldset>
                             <legend>Select your flavor:</legend>
-                            <input type="radio" id="spinach" name="gyoza" value="spinach" />
+                            <input type="radio" id="spinach" name="gyoza" value="Spinach and Feta" />
                             <label for="spinach">Spinach and Feta</label><br />
-                            <input type="radio" id="mushroom" name="gyoza" value="spinach" />
+                            <input type="radio" id="mushroom" name="gyoza" value="Chicken Mushroom" />
                             <label for="spinach">Chicken Mushroom</label><br />
-                            <input type="radio" id="pork" name="gyoza" value="pork" />
+                            <input type="radio" id="pork" name="gyoza" value="Kimchi Pork" />
                             <label for="pork">Kimchi Pork</label><br />
-                            <input type="radio" id="lobster" name="gyoza" value="lobster" />
+                            <input type="radio" id="lobster" name="gyoza" value="Lobster and Scallop" />
                             <label for="lobster">Lobster and Scallop</label><br />
-                            <input type="radio" id="truffle" name="gyoza" value="truffle" />
+                            <input type="radio" id="truffle" name="gyoza" value="Truffle Mushroom" />
                             <label for="truffle">Truffle Mushroom</label><br />
                         </fieldset>
                         <fieldset>
                             <legend>Select your size:</legend>
-                            <input type="radio" id="2un" name="quant" value="2un" />
+                            <input type="radio" id="2un" name="quant" value="2 un." />
                             <label for="2un">2 un: CAD$ 7.00</label><br />
-                            <input type="radio" id="4un" name="quant" value="4un" />
+                            <input type="radio" id="4un" name="quant" value="4 un." />
                             <label for="4un">4 un: CAD$ 10.00</label><br />
-                            <input type="radio" id="8un" name="quant" value="8un" />
+                            <input type="radio" id="8un" name="quant" value="8 un." />
                             <label for="8un">8 un: CAD$ 15.00</label>
                         </fieldset>
                         <button type="button">Add to Cart</button>
@@ -106,70 +126,81 @@
                 </div>
                 <div id="ramen_menu" class="submenu">
                     <div id="gallery_ramen">
-                        <div id="ramen1">
-                            <h3>Tonkotsu Ramen</h3>
-                            <img src="images/ramen/ram1.jpg" alt="ramen" />
+                        <div id="ramen1" class="ramens">
+                            <div>
+                                <img src="images/ramen/ram1.jpg" alt="gyoza" />
+                                <h3>Tonkotsu Ramen</h3>
+                            </div>
+                            <p>A rich and creamy pork bone broth with tender chashu pork, boiled egg, bamboo shoots, and green onions.</p>
                         </div>
-                        <div id="ramen2">
-                            <h3>Shoyu Ramen</h3>
-                            <img src="images/ramen/ram2.jpg" alt="ramen" />
+                        <div id="ramen2" class="ramens">
+                            <div>
+                                <img src="images/ramen/ram2.jpg" alt="gyoza" />
+                                <h3>Shoyu Ramen</h3>
+                            </div>
+                            <p>A soy sauce-based broth with chashu pork, menma (fermented bamboo shoots), green onions, and nori seaweed.</p>
                         </div>
-                        <div id="ramen3">
-                            <h3>Miso Ramen</h3>
-                            <img src="images/ramen/ram3.jpg" alt="ramen" />
+                        <div id="ramen3" class="ramens">
+                            <div>
+                                <img src="images/ramen/ram3.jpg" alt="gyoza" />
+                                <h3>Miso Ramen</h3>
+                            </div>
+                            <p>A miso-based broth with chashu pork, corn, bean sprouts, and green onions.</p>
                         </div>
-                        <div id="ramen4">
-                            <h3>Tantanmen Ramen</h3>
-                            <img src="images/ramen/ram4.jpg" alt="ramen" />
+                        <div id="ramen4" class="ramens">
+                            <div>
+                                <img src="images/ramen/ram4.jpg" alt="gyoza" />
+                                <h3>Tantanmen Ramen</h3>
+                            </div>
+                            <p>A spicy broth made with sesame paste, chili oil, and ground pork, topped with bok choy, spinach, and scallions.</p>
                         </div>
-                        <div id="ramen5">
-                            <h3>Vegetarian Ramen</h3>
-                            <img src="images/ramen/ram5.jpg" alt="ramen" />
+                        <div id="ramen5" class="ramens">
+                            <div>
+                                <img src="images/ramen/ram5.jpg" alt="gyoza" />
+                                <h3>Vegetarian Ramen</h3>
+                            </div>
+                            <p>A hearty vegetable broth with tofu, mushrooms, corn, and a variety of other vegetables, topped with nori seaweed and green onions.</p>
                         </div>
-                        <div id="ramen6">
-                            <h3>Duck Ramen</h3>
-                            <img src="images/ramen/ram6.jpg" alt="ramen" />
+                        <div id="ramen6" class="ramens">
+                            <div>
+                                <img src="images/ramen/ram6.jpg" alt="gyoza" />
+                                <h3>Duck Ramen</h3>
+                            </div>
+                            <p>A rich and flavorful broth made with duck bones, with tender slices of duck breast, bok choy, and green onions.</p>
                         </div>
                     </div>
                     <form id="form_ramen">
                         <fieldset>
                             <legend>Select your flavor (CAD$ 18.99):</legend>
-                            <p>Serves 1 person</p>
-                            <input type="radio" id="tonkotsu" name="ramen" value="tonkotsu" />
+                            <input type="radio" id="tonkotsu" name="ramen" value="Tonkotsu Ramen" />
                             <label for="tonkotsu">
                                 Tonkotsu Ramen
-                                <span>A rich and creamy pork bone broth with tender chashu pork, boiled egg, bamboo shoots, and green onions.</span>
                             </label><br />
-                            <input type="radio" id="shoyu" name="ramen" value="shoyu" />
+                            <input type="radio" id="shoyu" name="ramen" value="Shoyu Ramen" />
                             <label for="shoyu">
                                 Shoyu Ramen
-                                <span>A soy sauce-based broth with chashu pork, menma (fermented bamboo shoots), green onions, and nori seaweed.</span>
                             </label><br />
-                            <input type="radio" id="miso" name="ramen" value="miso" />
+                            <input type="radio" id="miso" name="ramen" value="Miso Ramen" />
                             <label for="miso">
                                 Miso Ramen
-                                <span>A miso-based broth with chashu pork, corn, bean sprouts, and green onions.</span>
                             </label><br />
-                            <input type="radio" id="tantan" name="ramen" value="tantan" />
+                            <input type="radio" id="tantan" name="ramen" value="Tantanmen Ramen" />
                             <label for="tantan">
                                 Tantanmen Ramen
-                                <span>A spicy broth made with sesame paste, chili oil, and ground pork, topped with bok choy, spinach, and scallions.</span>
                             </label><br />
-                            <input type="radio" id="veg" name="ramen" value="veg" />
+                            <input type="radio" id="veg" name="ramen" value="Vegetarian Ramen" />
                             <label for="veg">
                                 Vegetarian Ramen
-                                <span>A hearty vegetable broth with tofu, mushrooms, corn, and a variety of other vegetables, topped with nori seaweed and green onions.</span>
                             </label><br />
-                            <input type="radio" id="duck" name="ramen" value="duck" />
+                            <input type="radio" id="duck" name="ramen" value="Duck Ramen" />
                             <label for="duck">
                                 Duck Ramen
-                                <span>A rich and flavorful broth made with duck bones, with tender slices of duck breast, bok choy, and green onions.</span>
-                                </label><br />
+                            </label><br />
                         </fieldset>
                         <fieldset>
                             <legend>Select quantity:</legend>
                             <label for="quantity">How many?</label>
-                            <input id="quantity" name="quantity" type="number" min="1"/>
+                            <input id="quantity" name="quantity" type="number" min="1" />
                         </fieldset>
                         <button type="button">Add to Cart</button>
                     </form>
@@ -177,24 +208,39 @@
                 <div id="share_menu" class="submenu">
                     <div id="gallery_share">
                         <div id="share1">
-                            <h3>Okonomiyaki</h3>
-                            <img src="images/share/share1.jpg" alt="plate" />
+                            <div>
+                                <img src="images/share/share1.jpg" alt="plate" />
+                                <h3>Okonomiyaki</h3>
+                            </div>
+                            <p>A savory pancake made with a batter of flour, egg, and shredded cabbage, topped with sliced pork belly, bonito flakes, and drizzled with okonomiyaki sauce and mayonnaise.</p>
                         </div>
                         <div id="share2">
-                            <h3>Karaage</h3>
-                            <img src="images/share/share2.jpg" alt="plate" />
+                            <div>
+                                <img src="images/share/share2.jpg" alt="plate" />
+                                <h3>Karaage</h3>
+                            </div>
+                            <p>Japanese fried chicken marinated in soy sauce, garlic, and ginger, served with a side of Japanese mayo and a wedge of lemon.</p>
                         </div>
                         <div id="share3">
-                            <h3>Takoyaki</h3>
-                            <img src="images/share/share3.jpg" alt="plate" />
+                            <div>
+                                <img src="images/share/share3.jpg" alt="plate" />
+                                <h3>Takoyaki</h3>
+                            </div>
+                            <p>Octopus balls made with a batter of flour and dashi, filled with diced octopus, pickled ginger, and green onion, topped with takoyaki sauce, mayo, and bonito flakes.</p>
                         </div>
                         <div id="share4">
-                            <h3>Nasu Dengaku</h3>
-                            <img src="images/share/share4.webp" alt="plate" />
+                            <div>
+                                <img src="images/share/share4.webp" alt="plate" />
+                                <h3>Nasu Dengaku</h3>
+                            </div>
+                            <p>Grilled eggplant topped with a miso glaze, garnished with sesame seeds and scallions.</p>
                         </div>
                         <div id="share5">
-                            <h3>Tuna Tataki</h3>
-                            <img src="images/share/share5.webp" alt="plate" />
+                            <div>
+                                <img src="images/share/share5.webp" alt="plate" />
+                                <h3>Tuna Tataki</h3>
+                            </div>
+                            <p>Thinly sliced seared tuna served with ponzu sauce, grated daikon, and scallions.</p>
                         </div>
                     </div>
                     <form id="form_share">
@@ -204,27 +250,22 @@
                             <input type="radio" id="oko" name="share" value="okonomi" />
                             <label for="oko">
                                 Okonomiyaki
-                                <span>A savory pancake made with a batter of flour, egg, and shredded cabbage, topped with sliced pork belly, bonito flakes, and drizzled with okonomiyaki sauce and mayonnaise.</span>
                             </label><br />
                             <input type="radio" id="kara" name="share" value="karaage" />
                             <label for="kara">
                                 Karaage
-                                <span>Japanese fried chicken marinated in soy sauce, garlic, and ginger, served with a side of Japanese mayo and a wedge of lemon.</span>
                             </label><br />
                             <input type="radio" id="tako" name="share" value="takoyaki" />
                             <label for="tako">
                                 Takoyaki
-                                <span>Octopus balls made with a batter of flour and dashi, filled with diced octopus, pickled ginger, and green onion, topped with takoyaki sauce, mayo, and bonito flakes.</span>
                             </label><br />
                             <input type="radio" id="nasu" name="share" value="nasudengaku" />
                             <label for="nasu">
                                 Nasu Dengaku
-                                <span>Grilled eggplant topped with a miso glaze, garnished with sesame seeds and scallions.</span>
                             </label><br />
                             <input type="radio" id="tuna" name="share" value="tunatataki" />
                             <label for="tuna">
                                 Tuna Tataki
-                                <span>Thinly sliced seared tuna served with ponzu sauce, grated daikon, and scallions.</span>
                             </label><br />
                         </fieldset>
                         <fieldset>
@@ -238,24 +279,39 @@
                 <div id="alcohol_menu" class="submenu">
                     <div id="gallery_alcohol">
                         <div id="alcohol1">
-                            <h3>Japanese Highball</h3>
-                            <img src="images/alcohol/alc1.jpg" alt="alcohol" />
+                            <div>
+                                <img src="images/alcohol/alc1.jpg" alt="alcohol" />
+                                <h3>Japanese Highball</h3>
+                            </div>
+                            <p>A simple yet refreshing cocktail made with Japanese whisky and sparkling water, served over ice.</p>
                         </div>
                         <div id="alcohol2">
-                            <h3>Chu-Hai</h3>
-                            <img src="images/alcohol/alc2.jpg" alt="alcohol" />
+                            <div>
+                                <img src="images/alcohol/alc2.jpg" alt="alcohol" />
+                                <h3>Chu-Hai</h3>
+                            </div>
+                            <p>A popular Japanese cocktail made with shochu and flavored with lemon, grapefruit, or other fruits, mixed with soda water and served over ice.</p>
                         </div>
                         <div id="alcohol3">
-                            <h3>Umeshu</h3>
-                            <img src="images/alcohol/alc3.webp" alt="alcohol" />
+                            <div>
+                                <img src="images/alcohol/alc3.webp" alt="alcohol" />
+                                <h3>Umeshu</h3>
+                            </div>
+                            <p>A sweet and sour plum liqueur that can be served on the rocks or mixed with soda water for a refreshing cocktail.</p>
                         </div>
                         <div id="alcohol4">
-                            <h3>Sake Martini</h3>
-                            <img src="images/alcohol/alc4.jpg" alt="alcohol" />
+                            <div>
+                                <img src="images/alcohol/alc4.jpg" alt="alcohol" />
+                                <h3>Sake Martini</h3>
+                            </div>
+                            <p>A classic martini made with sake instead of gin or vodka, and often flavored with a hint of citrus or ginger.</p>
                         </div>
                         <div id="alcohol5">
-                            <h3>Yuzu Sour</h3>
-                            <img src="images/alcohol/alc5.jpg" alt="alcohol" />
+                            <div>
+                                <img src="images/alcohol/alc5.jpg" alt="alcohol" />
+                                <h3>Yuzu Sour</h3>
+                            </div>
+                            <p>A cocktail made with yuzu juice, a Japanese citrus fruit with a tangy and slightly sweet flavor, mixed with shochu, soda water, and a touch of simple syrup.</p>
                         </div>
                     </div>
                     <form id="form_alcohol">
@@ -265,27 +321,22 @@
                             <input type="radio" id="highball" name="drink" value="JapHighball" />
                             <label for="highball">
                                 Japanese Highball
-                                <span>A simple yet refreshing cocktail made with Japanese whisky and sparkling water, served over ice.</span>
                             </label><br />
                             <input type="radio" id="chuhai" name="drink" value="chuhai" />
                             <label for="chuhai">
                                 Chu Hai
-                                <span>A popular Japanese cocktail made with shochu and flavored with lemon, grapefruit, or other fruits, mixed with soda water and served over ice.</span>
                             </label><br />
                             <input type="radio" id="umeshu" name="drink" value="umeshu" />
                             <label for="umeshu">
                                 Umeshu
-                                <span>A sweet and sour plum liqueur that can be served on the rocks or mixed with soda water for a refreshing cocktail.</span>
                             </label><br />
                             <input type="radio" id="sakemart" name="drink" value="sakemartini" />
                             <label for="sakemart">
                                 Sake Martini
-                                <span>A classic martini made with sake instead of gin or vodka, and often flavored with a hint of citrus or ginger.</span>
                             </label><br />
                             <input type="radio" id="yuzu" name="drink" value="yuzusour" />
                             <label for="yuzu">
                                 Yuzu Sour
-                                <span>A cocktail made with yuzu juice, a Japanese citrus fruit with a tangy and slightly sweet flavor, mixed with shochu, soda water, and a touch of simple syrup.</span>
                             </label><br />
                         </fieldset>
                         <fieldset>
@@ -299,24 +350,39 @@
                 <div id="soft_menu" class="submenu">
                     <div id="gallery_soft">
                         <div id="soft1">
-                            <h3>Ramune</h3>
-                            <img src="images/soft/soft1.jpg" alt="soft" />
+                            <div>
+                                <img src="images/soft/soft1.jpg" alt="soft" />
+                                <h3>Ramune</h3>
+                            </div>
+                            <p>A Japanese soda with a unique bottle design and marble stopper. The soda comes in a variety of flavors, including classic lemon-lime, strawberry, and grape.</p>
                         </div>
                         <div id="soft2">
-                            <h3>Calpico</h3>
-                            <img src="images/soft/soft2.jpg" alt="soft" />
+                            <div>
+                                <img src="images/soft/soft2.jpg" alt="soft" />
+                                <h3>Calpico</h3>
+                            </div>
+                            <p>A Japanese non-carbonated soft drink with a milky and slightly tangy flavor, available in various fruit flavors like peach and lychee.</p>
                         </div>
                         <div id="soft3">
-                            <h3>Matcha Latte</h3>
-                            <img src="images/soft/soft3.jpg" alt="soft" />
+                            <div>
+                                <img src="images/soft/soft3.jpg" alt="soft" />
+                                <h3>Matcha Latte</h3>
+                            </div>
+                            <p>A traditional Japanese beverage made with finely ground green tea powder, steamed milk, and a touch of sweetener, with a creamy and slightly sweet taste.</p>
                         </div>
                         <div id="soft4">
-                            <h3>Iced Coffee</h3>
-                            <img src="images/soft/soft4.jpg" alt="soft" />
+                            <div>
+                                <img src="images/soft/soft4.jpg" alt="soft" />
+                                <h3>Iced Coffee</h3>
+                            </div>
+                            <p>A creamy and slightly sweet beverage made with matcha green tea powder, steamed milk, and a touch of sweetener, popular in both Japan and the west.</p>
                         </div>
                         <div id="soft5">
-                            <h3>Green Tea Latte</h3>
-                            <img src="images/soft/soft5.jpg" alt="soft" />
+                            <div>
+                                <img src="images/soft/soft5.jpg" alt="soft" />
+                                <h3>Green Tea Latte</h3>
+                            </div>
+                            <p>A popular western beverage, often served in Japanese cafes, made with ice, freshly brewed coffee, and a touch of sweetener or cream.</p>
                         </div>
                     </div>
                     <form id="form_soft">
@@ -327,27 +393,22 @@
                             <input type="radio" id="ramune" name="soft" value="ramune" />
                             <label for="ramune">
                                 Ramune
-                                <span>A Japanese soda with a unique bottle design and marble stopper. The soda comes in a variety of flavors, including classic lemon-lime, strawberry, and grape.</span>
                             </label><br />
                             <input type="radio" id="calpico" name="soft" value="calpico" />
                             <label for="calpico">
                                 Calpico
-                                <span>A Japanese non-carbonated soft drink with a milky and slightly tangy flavor, available in various fruit flavors like peach and lychee.</span>
                             </label><br />
                             <input type="radio" id="matcha" name="soft" value="matcha" />
                             <label for="matcha">
                                 Matcha Latte
-                                <span>A traditional Japanese beverage made with finely ground green tea powder, steamed milk, and a touch of sweetener, with a creamy and slightly sweet taste.</span>
                             </label><br />
                             <input type="radio" id="green_latte" name="soft" value="green_latte" />
                             <label for="green_latte">
                                 Green Tea Latte
-                                <span>A creamy and slightly sweet beverage made with matcha green tea powder, steamed milk, and a touch of sweetener, popular in both Japan and the west.</span>
                             </label><br />
                             <input type="radio" id="iced" name="soft" value="iced" />
                             <label for="iced">
                                 Iced Coffee
-                                <span>A popular western beverage, often served in Japanese cafes, made with ice, freshly brewed coffee, and a touch of sweetener or cream.</span>
                             </label><br />
                         </fieldset>
                         <fieldset>
@@ -362,75 +423,7 @@
         </section>
     </main>
     <footer>
-        <nav>
-            <img alt="icon_menu" src="images/menu.png" />
-            <div>
-                <a>Teste</a>
-                <a>Teste</a>
-            </div>
-        </nav>
-        <!--<nav>
-            <div>
-                <a href="#products">Products</a>
-                <div>
-                    <a href="#product1" class="bs"></a>
-                    <a href="#product2" class="bs"></a>
-                    <a href="#product3" class="bs"></a>
-                    <a href="#product4" class="bs"></a>
-                </div>
-            </div>
-        </nav>-->
     </footer>
-
+    <script src="java.js"></script>
 </body>
 </html>
-
-<!--<h2>To Eat</h2>
-    <div class="sub_sub_menu">
-        <h3>Sushi Bar</h3>
-        <div class="item">
-            <div class="img_item">-->
-<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
-<!--</div>
-    <h4 class="item_name">Sushi</h4>
-    <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
-    <p class="size">6 un.</p>
-    <p class="price">CAD$ 20.00</p>
-</div>
-<div class="item">
-    <div class="img_item">-->
-<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
-<!--</div>
-        <h4 class="item_name">Sushi</h4>
-        <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
-        <p class="size">6 un.</p>
-        <p class="price">CAD$ 20.00</p>
-    </div>
-</div>
-<div class="sub_sub_menu">
-    <h3>Plates to Share</h3>
-    <div class="item">
-        <div class="img_item">-->
-<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
-<!--</div>
-    <h4 class="item_name">Sushi</h4>
-    <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
-    <p class="size">6 un.</p>
-    <p class="price">CAD$ 20.00</p>
-</div>
-<div class="item">
-    <div class="img_item">-->
-<!--<img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="sushi" />-->
-<!--</div>
-        <h4 class="item_name">Sushi</h4>
-        <p class="desc">The traditional sushi, with raw fish and our delicious rice. You can choose between Salmon, Tuna or White Fish.</p>
-        <p class="size">6 un.</p>
-        <p class="price">CAD$ 20.00</p>
-    </div>
-</div>
-<section class="sub_sub_menu">
-    <h3>For those hot days</h3>
-</section>
-<section class="sub_sub_menu">
-    <h3>To fill you "Sweet Tooth"</h3>
-</section>-->
