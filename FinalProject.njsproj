@@ -36,22 +36,17 @@
     <Content Include="public\brand\menu_white.jpg" />
     <Content Include="public\brand\no_back.png" />
     <Content Include="public\brand\white_back.png" />
-    <Content Include="public\images\andraz-lazic-iy_MT2ifklc-unsplash.jpg" />
     <Content Include="public\images\cancel.png" />
     <Content Include="public\images\delete.png" />
-    <Content Include="public\images\derek-duran-Jz4QMhLvGgw-unsplash.jpg" />
-    <Content Include="public\images\dustan-woodhouse-jnsFZJrhuMM-unsplash.jpg" />
+    <Content Include="public\images\facebook.png" />
     <Content Include="public\images\header.jpg" />
-    <Content Include="public\images\ikhsan-baihaqi-pbc2wXbQYpI-unsplash.jpg" />
-    <Content Include="public\images\mae-mu-H5Hj8QV2Tx4-unsplash.jpg" />
-    <Content Include="public\images\mahmoud-fawzy-FBezBX26dyY-unsplash.jpg" />
-    <Content Include="public\images\marine-dumay-kXOPcslsae8-unsplash.jpg" />
+    <Content Include="public\images\instagram.png" />
     <Content Include="public\images\menu.png" />
     <Content Include="public\images\resto\rest1.jpg" />
     <Content Include="public\images\resto\rest2.jpg" />
     <Content Include="public\images\resto\rest3.jpg" />
-    <Content Include="public\images\vinicius-benedit--1GEAA8q3wk-unsplash.jpg" />
-    <Content Include="public\images\yoav-aziz-TqtY4_sQGVE-unsplash.jpg" />
+    <Content Include="public\images\tik-tok.png" />
+    <Content Include="public\images\twitter.png" />
     <Content Include="public\index.css">
       <SubType>Code</SubType>
     </Content>

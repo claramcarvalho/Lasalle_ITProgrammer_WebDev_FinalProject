@@ -2,7 +2,7 @@ body {
     background-color:black;
     margin:0;
     display:grid;
-    grid-template-rows: 600px auto 500px;
+    grid-template-rows: 600px auto auto;
     grid-template-areas:
         "header"
         "main"
@@ -14,6 +14,7 @@ section {
     margin: 0px 40px 40px 40px;
     padding-top:30px;
     box-sizing: content-box;
+    color:white;
 }
 
 h2 {
@@ -508,23 +509,24 @@ form {
     grid: nivel 1: footer
     -------------------------------
 */
-footer{
-    grid-area:footer;
-}
-
-
-
-    /*sections*/
-    section {
-        color: white;
-    }
-
-
-    /*
-    FOOTER
-*/
 
 footer {
-    background-color: white;
-    padding:20px;
+    background-color: #b9816a;
+    padding: 20px;
+    grid-area: footer;
+    font-family: 'Outfit', sans-serif;
+}
+
+footer>section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    color:black;
+    margin:10px;
+    padding:10px;
+}
+
+#social_media_buttons>img{
+    width:30px;
 }

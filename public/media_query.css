@@ -19,6 +19,9 @@
             "gallery gallery gallery"
             ". form .";
     }
+    #nav_menu a{
+        font-size:80%;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -27,6 +30,9 @@
         grid-template-areas:
             "gallery gallery gallery"
             ". form .";
+    }
+    #nav_menu a {
+        font-size: 60%;
     }
 }
 
