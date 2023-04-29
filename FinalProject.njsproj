@@ -36,6 +36,9 @@
     <Content Include="public\brand\menu_white.jpg" />
     <Content Include="public\brand\no_back.png" />
     <Content Include="public\brand\white_back.png" />
+    <Content Include="public\Cart.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\images\cancel.png" />
     <Content Include="public\images\delete.png" />
     <Content Include="public\images\facebook.png" />
@@ -55,7 +58,15 @@
     </Content>
     <Content Include="public\index\header.jpg" />
     <Content Include="public\java.js" />
+    <Content Include="public\java_kitchen.js" />
+    <Content Include="public\java_order_page.js" />
+    <Content Include="public\kitchen.css" />
+    <Content Include="public\kitchen.html" />
     <Content Include="public\media_query.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\order.css" />
+    <Content Include="public\order.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="README.md" />

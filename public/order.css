@@ -1,0 +1,130 @@
+body {
+    background-color: black;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "order"
+        "complete";
+    position: relative;
+    font-family: 'Switzer', sans-serif;
+}
+
+section {
+    margin: 0px 40px 40px 40px;
+    padding-top:30px;
+    box-sizing: content-box;
+    color:white;
+}
+
+#review_order{
+    grid-area:order;
+    
+}
+#complete_order {
+    grid-area: complete;
+}
+
+#complete_order>fieldset{
+    margin: 0px auto;
+    width:300px;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 50px;
+    font-weight:500;
+}
+
+p {
+    font-family: 'Switzer', sans-serif;
+    font-size:20px;
+    font-weight:200;
+}
+
+/* table */
+#review_order table, #review_order table th, #review_order table td {
+    border-collapse: collapse;
+    border: 2px solid #518269;
+    padding: 7px;
+    color:black;
+}
+
+#review_order table th {
+    font-size:120%;
+}
+
+#review_order > div {
+    padding: 15px;
+    background-color: #ef826e;
+    margin: 0px 25vw;
+    border-radius:15px;
+}
+
+#review_order table {
+    margin: 0px auto;
+    background-color: #b8826c;
+}
+
+#review_order table td:nth-child(3), #review_order h3 {
+    text-align: center;
+}
+
+/* complete order */
+
+#complete_order{
+    display:grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "form form"
+        "back submit";
+    gap: 15px;
+}
+
+#complete_order>fieldset{
+    grid-area:form;
+}
+#complete_order > a {
+    grid-area: back;
+    justify-self:start;
+    padding:7px;
+}
+
+#complete_order > a:hover {
+    background-color: #ef826e;
+    border-radius:5px;
+}
+
+#complete_order > button {
+    grid-area: submit;
+    justify-self:end;
+}
+
+#inp_elements {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 140px 140px;
+    grid-template-areas:
+        "lab_fname input_fname"
+        "lab_lname input_lname";
+    gap:10px;
+    padding:10px;
+}
+
+#inp_elements > label:first-of-type {
+    grid-area: lab_fname;
+}
+#inp_elements > label:last-of-type {
+    grid-area: lab_lname;
+}
+#inp_elements > input:first-of-type {
+    grid-area: input_fname;
+}
+#inp_elements > input:last-of-type {
+    grid-area: input_lname;
+}
+
+#inp_elements > input {
+    width: 125px;
+}

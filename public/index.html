@@ -25,10 +25,11 @@
     <nav id="menu_nav">
         <img id="menu_button" alt="icon_menu" src="images/menu.png" />
         <div>
+            <img id="close_menu_button" alt="close" src="images/cancel.png" />
             <a href="#top">Home</a>
             <a href="#presentation">The Restaurant</a>
             <a href="#menu">Menu</a>
-            <img id="close_menu_button" alt="close" src="images/cancel.png" />
+            <a href="kitchen.html">Kitchen</a>
         </div>
     </nav>
     <nav id="cart">
@@ -37,8 +38,25 @@
             <img id="close_cart_button" alt="close" src="images/cancel.png" />
             <h3>Your selection</h3>
             <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Item</th>
+                        <th>Quant.</th>
+                        <th>Price Un.</th>
+                        <th>Price Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6">Your cart is empty!</td>
+                    </tr>
+                </tbody>
             </table>
             <h4>Total: 0,00</h4>
+            <button type="button">Empty Cart</button>
+            <a href="order.html">Review and Submit your Order</a>
         </div>
     </nav>
     <header>
@@ -47,11 +65,11 @@
     <main>
         <section id="presentation">
             <h2>The Gyoza Restaurant</h2>
-            <img src="images/resto/rest1.jpg" alt="Deco"/> 
+            <img src="images/resto/rest1.jpg" alt="Deco" />
             <p>Gyoza is a sophisticated Japanese restaurant located in the heart of Montreal, offering a one-of-a-kind and exquisite dining experience. From the moment you step into the restaurant, you'll be transported to Japan, with our sleek and modern decor and warm and inviting atmosphere. From the presentation of the dishes to the quality of the ingredients, we payed attention to the smallest detail in every aspect of our restaurant.</p>
-            <p>We are specialized in gyoza, a delicious Japanese pan-fried dumplings, that are crispy on the outside and juicy on the inside. The menu offers a variety of flavors and fillings to choose from, including classic pork, succulent shrimp, rich and creamy cheese, and fresh and flavorful vegetables. Each gyoza is made with care and attention, and the flavors and textures are perfectly balanced, making each bite a delight for your senses.</p>
-            <p>In addition to its signature gyoza, we also offer a range of other Japanese cuisine staples, such as ramen, sushi, sashimi, tempura, and salads. All dishes are created using fresh and high-quality ingredients, and the chefs pay meticulous attention to the preparation and presentation of each dish. Whether you're in the mood for a comforting bowl of ramen or a delicate plate of sashimi, Gyoza has something to satisfy every palate.</p>
-            <img src="images/resto/rest3.jpg" alt="Preparation"/>
+            <p>We are specialized in gyoza, a delicious Japanese pan-fried dumplings, that are crispy on the outside and juicy on the inside. The menu offers a variety of flavors and fillings to choose from, including classic pork, succulent lobster, rich and creamy spinach and feta, and fresh and flavorful mushrooms. Each gyoza is made with care and attention, and the flavors and textures are perfectly balanced, making each bite a delight for your senses.</p>
+            <p>In addition to its signature gyoza, we also offer a range of other Japanese cuisine staples, such as ramen and other delicious plates to share. All dishes are created using fresh and high-quality ingredients, and the chefs pay meticulous attention to the preparation and presentation of each dish. Whether you're in the mood for a comforting bowl of ramen or a delicate plate of Tuna Tataki, Gyoza has something to satisfy every palate.</p>
+            <img src="images/resto/rest3.jpg" alt="Preparation" />
             <p>To complement our delicious food, Gyoza also serves a wide range of beverages, including cocktails, wines, and sakes. The restaurant's knowledgeable and friendly staff are always happy to help diners choose the perfect beverage to accompany their meal, whether it's a bold and fruity cocktail or a crisp and refreshing sake.</p>
             <p>Gyoza is the perfect venue for a romantic date night, a work lunch, or a family celebration. Our restaurant's cozy and intimate setting is perfect for a romantic evening, while its spacious and bright dining room is ideal for larger groups. The attentive and friendly service adds to the overall dining experience, making every visit to Gyoza memorable and enjoyable.</p>
             <p>Gyoza is a must-visit destination for anyone looking for a unique and high-quality Japanese dining experience in Montreal. We offer excellence in service and that make us one of the best Japanese restaurants in the city. Whether you're a fan of gyoza or simply looking to try something new, we are here to impress.</p>
@@ -101,7 +119,7 @@
                     </div>
                     <form id="form_gyoza">
                         <fieldset>
-                            <legend>Select your flavor:</legend>
+                            <legend>Select your flavor (CAD$ 3.99 each):</legend>
                             <input type="radio" id="spinach" name="gyoza" value="Spinach and Feta" />
                             <label for="spinach">Spinach and Feta</label><br />
                             <input type="radio" id="mushroom" name="gyoza" value="Chicken Mushroom" />
@@ -114,13 +132,9 @@
                             <label for="truffle">Truffle Mushroom</label><br />
                         </fieldset>
                         <fieldset>
-                            <legend>Select your size:</legend>
-                            <input type="radio" id="2un" name="quant" value="2 un." />
-                            <label for="2un">2 un: CAD$ 7.00</label><br />
-                            <input type="radio" id="4un" name="quant" value="4 un." />
-                            <label for="4un">4 un: CAD$ 10.00</label><br />
-                            <input type="radio" id="8un" name="quant" value="8 un." />
-                            <label for="8un">8 un: CAD$ 15.00</label>
+                            <legend>Select quantity:</legend>
+                            <label for="quantity">How many?</label>
+                            <input id="quantity" name="quantity" type="number" min="1" />
                         </fieldset>
                         <button type="button">Add to Cart</button>
                     </form>
@@ -319,23 +333,23 @@
                         <fieldset>
                             <legend>Select your drink (CAD$ 12,50):</legend>
                             <p>Each drink is around 5oz (250ml)</p>
-                            <input type="radio" id="highball" name="drink" value="JapHighball" />
+                            <input type="radio" id="highball" name="drink" value="Japanese Highball" />
                             <label for="highball">
                                 Japanese Highball
                             </label><br />
-                            <input type="radio" id="chuhai" name="drink" value="chuhai" />
+                            <input type="radio" id="chuhai" name="drink" value="Chu Hai" />
                             <label for="chuhai">
                                 Chu Hai
                             </label><br />
-                            <input type="radio" id="umeshu" name="drink" value="umeshu" />
+                            <input type="radio" id="umeshu" name="drink" value="Umeshu" />
                             <label for="umeshu">
                                 Umeshu
                             </label><br />
-                            <input type="radio" id="sakemart" name="drink" value="sakemartini" />
+                            <input type="radio" id="sakemart" name="drink" value="Sake Martini" />
                             <label for="sakemart">
                                 Sake Martini
                             </label><br />
-                            <input type="radio" id="yuzu" name="drink" value="yuzusour" />
+                            <input type="radio" id="yuzu" name="drink" value="Yuzu Sour" />
                             <label for="yuzu">
                                 Yuzu Sour
                             </label><br />
@@ -425,10 +439,10 @@
     </main>
     <footer>
         <section id="social_media_buttons">
-            <img src="images/facebook.png" alt="facebook_icon"/>
-            <img src="images/instagram.png" alt="instagram_icon"/>
-            <img src="images/twitter.png" alt="twitter_icon"/>
-            <img src="images/tik-tok.png" alt="tiktok_icon"/>
+            <img src="images/facebook.png" alt="facebook_icon" />
+            <img src="images/instagram.png" alt="instagram_icon" />
+            <img src="images/twitter.png" alt="twitter_icon" />
+            <img src="images/tik-tok.png" alt="tiktok_icon" />
         </section>
         <section id="location">
             <h3>
@@ -440,5 +454,6 @@
         </section>
     </footer>
     <script src="java.js"></script>
+    <script src="Cart.js"></script>
 </body>
 </html>

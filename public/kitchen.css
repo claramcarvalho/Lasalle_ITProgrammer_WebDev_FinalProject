@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Switzer', sans-serif;
+}
+
+#all_orders {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "title"
+        "orders";
+}
+
+#all_orders>h2{
+    grid-area:title;
+}
+
+#all_orders>div{
+    grid-area:orders;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+#all_orders > div > div {
+    width: 320px;
+    background-color: #ef826e;
+    padding: 15px;
+    border-radius:20px;
+}
+
+#all_orders > div > div > table {
+    border-collapse: collapse;
+    background-color: #b8826c;
+}
+
+#all_orders > div > div > table > thead > tr > th, #all_orders > div > div > table > tbody > tr > td {
+    border: 2px solid #518269;
+    padding: 7px;
+    color: black;
+}
+
+    #all_orders td {
+        padding: 7px;
+    }
+
+/*#all_orders>div>div>table>tbody>tr>td {
+    border: 3px solid white;
+}
+*/
+#all_orders > div > div > table > tbody > tr > td > table {
+    border-collapse: collapse
+}
+
+#all_orders > div > div > table > tbody > tr > td > table > tbody > tr:not(:last-of-type) {
+    border-bottom: 3px solid #ef826e;
+}
+
+#all_orders button {
+    padding: 3px;
+    margin: 5px 135px;
+}
