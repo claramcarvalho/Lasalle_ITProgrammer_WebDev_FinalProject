@@ -1,4 +1,4 @@
 # FinalProject
 #This is the repository for Web Client Development.
 
-<a href='/public/index.html'>Go to Webpage</a>
+<a href='/Lasalle_ITProgrammer_WebDev_FinalProject/public/index.html'>Go to Webpage</a>
